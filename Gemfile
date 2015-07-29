@@ -43,6 +43,8 @@ end
 group :test do
   # Death to haphazard monkey-patching! Extend Minitest through simple hooks:
   gem 'minitest-reporters', '~> 1.0'
+  # A command line tool to handle events on file system modifications:
+  gem 'guard', '~> 2.0'
   # Automatically run your tests with the Minitest framework:
   gem 'guard-minitest', '~> 2.0'
 end
