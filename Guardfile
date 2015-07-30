@@ -32,6 +32,9 @@ guard :minitest, spring: true, all_on_start: false do
   watch %r{^app/views/([^/]+)/.*\.html\.erb$} do |m|
     resource_tests(m[1])
   end
+  watch(%r{app/views/layouts/.*}) do
+    'test/integration'
+  end
   watch %r{^app/views/(.+)_mailer/.+} do |m|
     "test/mailers/#{m[1]}_mailer_test.rb"
   end
