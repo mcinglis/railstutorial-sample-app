@@ -15,7 +15,7 @@ end
 
 guard :minitest, spring: true, all_on_start: false do
 
-  watch('config/routes.rb')                  { 'test/integration' }
+  watch('config/routes.rb')                  { 'test' }
   watch('test/test_helper.rb')               { 'test' }
   watch('app/helpers/application_helper.rb') { 'test' }
   watch(%r{^test/.+_test\.rb$})
