@@ -16,9 +16,21 @@
  *= require_self
  */
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+/* mixins, variables, etc. */
+
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* element rules */
 
 body {
     padding-top: 60px;
@@ -64,6 +76,7 @@ p {
     }
 }
 
+
 /* header */
 
 #logo {
@@ -81,6 +94,7 @@ p {
       text-decoration: none;
     }
 }
+
 
 /* footer */
 
@@ -110,5 +124,52 @@ footer {
             margin-left: 15px;
         }
     }
+}
+
+
+/* sidebar */
+
+aside {
+    section {
+        padding: 10px 0;
+        margin-top: 20px;
+        &:first-child {
+            border: 0;
+            padding-top: 0;
+        }
+        span {
+            display: block;
+            margin-bottom: 3px;
+            line-height: 1;
+        }
+        h1 {
+            font-size: 1.4em;
+            text-align: left;
+            letter-spacing: -1px;
+            margin-top: 0px;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.gravatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.gravatar-edit {
+    margin-top: 15px;
+}
+
+
+
+/* miscellaneous */
+
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
 }
 
