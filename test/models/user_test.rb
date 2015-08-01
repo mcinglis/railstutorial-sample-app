@@ -71,11 +71,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
 
-  test 'should be invalid with blank password' do
-    @user.password = @user.password_confirmation = ' ' * 6
-    assert_not @user.valid?
-  end
-
   test 'should be invalid with password too short' do
     @user.password = @user.password_confirmation = 'a' * 5
     assert_not @user.valid?
