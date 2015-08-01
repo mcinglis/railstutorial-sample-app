@@ -1,3 +1,3 @@
 
-# Sample App from <railstutorial.org>
+# Sample App from RailsTutorial.org
 
