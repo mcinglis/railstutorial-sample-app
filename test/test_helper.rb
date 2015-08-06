@@ -11,6 +11,7 @@ class ActiveSupport::TestCase
   fixtures :all
 
   include ApplicationHelper
+  include SessionsHelper
 
 end
 

@@ -9,4 +9,8 @@ module ApplicationHelper
     end
   end
 
+  def digest_password(password)
+    BCrypt::Password.create(password)
+  end
+
 end
