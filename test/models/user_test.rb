@@ -76,5 +76,9 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test 'remember token should be invalid whenever remember digest is nil' do
+    assert_not @user.valid_remember_token? ''
+  end
+
 end
 
